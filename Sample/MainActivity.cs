@@ -14,6 +14,8 @@ public class MainActivity : ActivityEvent
         // Set our view from the "main" layout resource
         SetContentView(ResourceConstant.Layout.activity_main);
         _ = Foo();
+
+
     }
 
     private async Task Foo()
