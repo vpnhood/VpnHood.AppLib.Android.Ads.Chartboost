@@ -16,6 +16,7 @@ public class MainActivity : ActivityEvent
         _ = Foo();
     }
 
+    // Test
     private async Task Foo()
     {
         try
