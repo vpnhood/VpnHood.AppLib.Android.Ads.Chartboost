@@ -10,6 +10,6 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VhChartboost\VpnHood.Client.App.Android.Ads.Chartboost.csproj" />
+    <ProjectReference Include="..\VhChartboost\VpnHood.AppLib.Android.Ads.Chartboost.csproj" />
   </ItemGroup>
 </Project>

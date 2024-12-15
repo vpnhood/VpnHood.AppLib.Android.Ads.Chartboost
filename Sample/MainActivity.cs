@@ -1,7 +1,5 @@
 using _Microsoft.Android.Resource.Designer;
-using VpnHood.Client.App.Droid.Ads.VhChartboost;
-using VpnHood.Client.Device.Droid;
-using VpnHood.Client.Device.Droid.ActivityEvents;
+using VpnHood.Core.Client.Device.Droid.ActivityEvents;
 
 namespace Sample;
 
@@ -20,6 +18,7 @@ public class MainActivity : ActivityEvent
     {
         try
         {
+            await Task.CompletedTask;
             //var adService = ChartboostAdProvider.Create(ChartboostCredential.AppId, ChartboostCredential.AdSignature, ChartboostCredential.AdLocation);
             //await adService.LoadAd(new AndroidUiContext(this), new CancellationToken());
             //await adService.ShowAd(new AndroidUiContext(this), "", new CancellationToken());
