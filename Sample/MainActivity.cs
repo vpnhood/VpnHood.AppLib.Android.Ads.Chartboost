@@ -19,7 +19,6 @@ public class MainActivity : ActivityEvent
         try
         {
             await Task.CompletedTask;
-
             //var adService = ChartboostAdProvider.Create(ChartboostCredential.AppId, ChartboostCredential.AdSignature, ChartboostCredential.AdLocation);
             //await adService.LoadAd(new AndroidUiContext(this), new CancellationToken());
             //await adService.ShowAd(new AndroidUiContext(this), "", new CancellationToken());
