@@ -34,11 +34,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="VpnHood.AppLib.Abstractions" Version="5.0.615" />
-	  <PackageReference Include="VpnHood.Core.Client.Device.Android" Version="5.0.615" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.1.0.3" />
+	  <PackageReference Include="VpnHood.AppLib.Abstractions" Version="5.0.621" />
+	  <PackageReference Include="VpnHood.Core.Client.Device.Android" Version="5.0.621" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0" />
     <PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.3" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.2.0.3" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.3.0" />
     <PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.19" />
     <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.21.1" />
 	</ItemGroup>

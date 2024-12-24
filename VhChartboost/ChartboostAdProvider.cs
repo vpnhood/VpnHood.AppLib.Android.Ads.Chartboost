@@ -13,6 +13,7 @@ public class ChartboostAdProvider(string appId, string adSignature, string adLoc
 {
     private Interstitial? _chartboostInterstitialAd;
     private MyInterstitialCallBack? _myInterstitialCallBack;
+
     public string NetworkName => "Chartboost";
     public AppAdType AdType => AppAdType.InterstitialAd;
     public DateTime? AdLoadedTime { get; private set; }
