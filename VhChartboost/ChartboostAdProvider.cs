@@ -1,13 +1,13 @@
-﻿using VpnHood.Client.App.Abstractions;
-using VpnHood.Client.Device;
-using VpnHood.Client.Device.Droid;
-using VpnHood.Client.Device.Droid.Utils;
-using VpnHood.Common.Exceptions;
+﻿using VpnHood.AppLib.Abstractions;
+using VpnHood.Core.Client.Device;
+using VpnHood.Core.Client.Device.Droid;
+using VpnHood.Core.Client.Device.Droid.Utils;
+using VpnHood.Core.Common.Exceptions;
 using Com.Chartboost.Sdk.Ads;
 using Com.Chartboost.Sdk.Callbacks;
 using Com.Chartboost.Sdk.Events;
 
-namespace VpnHood.Client.App.Droid.Ads.VhChartboost;
+namespace VpnHood.AppLib.Droid.Ads.VhChartboost;
 
 public class ChartboostAdProvider(string appId, string adSignature, string adLocation) : IAppAdProvider
 {

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Description>VpnHood Android Ad Library for Chartboost</Description>
-		<TargetFramework>net8.0-android</TargetFramework>
+		<TargetFramework>net9.0-android35.0</TargetFramework>
 		<SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
-    <RootNamespace>VpnHood.Client.App.Droid.Ads.VhChartboost</RootNamespace>
+    <RootNamespace>VpnHood.AppLib.Droid.Ads.VhChartboost</RootNamespace>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -19,9 +19,9 @@
 		<Company>OmegaHood LLC</Company>
 		<Copyright>© OmegaHood LLC. All rights reserved.</Copyright>
 		<PackageIcon>VpnHood.png</PackageIcon>
-		<PackageProjectUrl>https://github.com/vpnhood/VpnHood.Client.App.Android.Ads.Chartboost</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/vpnhood/VpnHood.Client.App.Android.Ads.Chartboost</RepositoryUrl>
-		<Version>4.5.554</Version>
+		<PackageProjectUrl>https://github.com/vpnhood/VpnHood.AppLib.Android.Ads.Chartboost</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/vpnhood/VpnHood.AppLib.Android.Ads.Chartboost</RepositoryUrl>
+		<Version>5.0.560</Version>
 		<FileVersion>$([System.DateTime]::Now.ToString("yyyy.M.d.HHmm"))</FileVersion>
 		<BaseIntermediateOutputPath />
 	</PropertyGroup>
@@ -34,13 +34,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="VpnHood.Client.App.Abstractions" Version="4.6.566" />
-	  <PackageReference Include="VpnHood.Client.Device.Android" Version="4.6.566" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.1.0.2" />
-    <PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.2" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.2.0.2" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.18" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.20" />
+	  <PackageReference Include="VpnHood.AppLib.Abstractions" Version="5.0.615" />
+	  <PackageReference Include="VpnHood.Core.Client.Device.Android" Version="5.0.615" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.1.0.3" />
+    <PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.3" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.2.0.3" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.19" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.21.1" />
 	</ItemGroup>
 
 </Project>
