@@ -12,7 +12,4 @@
   <ItemGroup>
     <ProjectReference Include="..\VhChartboost\VpnHood.AppLib.Android.Ads.Chartboost.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.19.1" />
-  </ItemGroup>
 </Project>

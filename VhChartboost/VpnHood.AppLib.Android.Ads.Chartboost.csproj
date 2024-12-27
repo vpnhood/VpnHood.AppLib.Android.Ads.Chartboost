@@ -3,7 +3,7 @@
 		<Description>VpnHood Android Ad Library for Chartboost</Description>
 		<TargetFramework>net9.0-android35.0</TargetFramework>
 		<SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
-    <RootNamespace>VpnHood.AppLib.Droid.Ads.VhChartboost</RootNamespace>
+		<RootNamespace>VpnHood.AppLib.Droid.Ads.VhChartboost</RootNamespace>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -34,13 +34,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="VpnHood.AppLib.Abstractions" Version="5.0.621" />
-	  <PackageReference Include="VpnHood.Core.Client.Device.Android" Version="5.0.621" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.3" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.3.0" />
-    <PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.19" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.21.1" />
+		<PackageReference Include="VpnHood.AppLib.Abstractions" Version="5.0.621" />
+		<PackageReference Include="VpnHood.Core.Client.Device.Android" Version="5.0.621" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Ads.Identifier" Version="118.2.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.AppSet" Version="116.1.0.3" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Auth" Version="121.3.0" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Gcm" Version="117.0.0.19" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="2.0.21.1" />
+		<PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.19.1" />
 	</ItemGroup>
 
 </Project>
