@@ -18,6 +18,8 @@ public class ChartboostAdProvider(string appId, string adSignature, string adLoc
     public AppAdType AdType => AppAdType.InterstitialAd;
     public DateTime? AdLoadedTime { get; private set; }
     public TimeSpan AdLifeSpan { get; } = TimeSpan.FromMinutes(45);
+    public static int RequiredAndroidVersion => ChartboostUtil.RequiredAndroidVersion;
+    public static bool IsAndroidVersionSupported => ChartboostUtil.IsAndroidVersionSupported;
 
     public static ChartboostAdProvider Create(string appId, string adSignature, string adLocation, TimeSpan initializeTimeout)
     {
