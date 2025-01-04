@@ -9,7 +9,7 @@ using Com.Chartboost.Sdk.Events;
 
 namespace VpnHood.AppLib.Droid.Ads.VhChartboost;
 
-public class ChartboostAdProvider(string appId, string adSignature, string adLocation) : IAppAdProvider
+public class ChartboostAdProvider(string appId, string adSignature, string adLocation, TimeSpan initializeTimeout) : IAppAdProvider
 {
     private Interstitial? _chartboostInterstitialAd;
     private MyInterstitialCallBack? _myInterstitialCallBack;
@@ -19,9 +19,9 @@ public class ChartboostAdProvider(string appId, string adSignature, string adLoc
     public DateTime? AdLoadedTime { get; private set; }
     public TimeSpan AdLifeSpan { get; } = TimeSpan.FromMinutes(45);
 
-    public static ChartboostAdProvider Create(string appId, string adSignature, string adLocation)
+    public static ChartboostAdProvider Create(string appId, string adSignature, string adLocation, TimeSpan initializeTimeout)
     {
-        var ret = new ChartboostAdProvider(appId, adSignature, adLocation);
+        var ret = new ChartboostAdProvider(appId, adSignature, adLocation, initializeTimeout);
         return ret;
     }
 
@@ -33,7 +33,7 @@ public class ChartboostAdProvider(string appId, string adSignature, string adLoc
             throw new AdException("MainActivity has been destroyed before loading the ad.");
 
         // initialize
-        await ChartboostUtil.Initialize(activity, appId, adSignature, cancellationToken);
+        await ChartboostUtil.Initialize(activity, appId, adSignature, initializeTimeout, cancellationToken);
 
         // reset the last loaded ad
         AdLoadedTime = null;

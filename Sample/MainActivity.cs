@@ -24,9 +24,14 @@ public class MainActivity : ActivityEvent
         try
         {
             await Task.CompletedTask;
-            var adService = ChartboostAdProvider.Create(ChartboostCredential.AppId, ChartboostCredential.AdSignature, ChartboostCredential.AdLocation);
-            await adService.LoadAd(new AndroidUiContext(this), new CancellationToken());
-            await adService.ShowAd(new AndroidUiContext(this), "", new CancellationToken());
+            var adService = ChartboostAdProvider.Create(
+                ChartboostCredential.AppId, 
+                ChartboostCredential.AdSignature, 
+                ChartboostCredential.AdLocation,
+                TimeSpan.FromSeconds(5));
+
+            await adService.LoadAd(new AndroidUiContext(this), CancellationToken.None);
+            await adService.ShowAd(new AndroidUiContext(this), customData: "", CancellationToken.None);
         }
         catch (Exception e)
         {

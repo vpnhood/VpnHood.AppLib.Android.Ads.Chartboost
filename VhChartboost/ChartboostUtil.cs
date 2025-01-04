@@ -11,10 +11,17 @@ public class ChartboostUtil
 {
     private static readonly AsyncLock InitLock = new();
     public static bool IsInitialized { get; private set; }
+    public static int RequiredAndroidVersion => 28;
+    public static bool IsAndroidVersionSupported => OperatingSystem.IsAndroidVersionAtLeast(RequiredAndroidVersion);
 
     public static async Task Initialize(Activity activity, string appId, string adSignature,
-        CancellationToken cancellationToken)
+        TimeSpan timeout, CancellationToken cancellationToken)
     {
+        // it looks like there is conflict between this provider SDK and Xamarin.GooglePlayServices.Ads.Identifier 118.2.0
+        // However we have decided to stop testing this provider in any android lower than 9.0
+        if (!IsAndroidVersionSupported)
+            throw new NotSupportedException("Chartboost SDK requires Android 9.0 or higher.");
+
         using var lockAsync = await InitLock.LockAsync(cancellationToken);
         if (IsInitialized)
             return;
@@ -24,7 +31,7 @@ public class ChartboostUtil
         Chartboost.StartWithAppId(activity, appId, adSignature, sdkStartCallback);
 
         await sdkStartCallback.Task
-            .WaitAsync(cancellationToken)
+            .WaitAsync(timeout, cancellationToken)
             .ConfigureAwait(false);
 
         IsInitialized = true;
