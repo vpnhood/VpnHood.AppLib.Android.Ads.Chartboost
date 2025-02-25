@@ -1,15 +1,16 @@
 ﻿using VpnHood.AppLib.Abstractions;
-using VpnHood.Core.Client.Device;
 using VpnHood.Core.Client.Device.Droid;
 using VpnHood.Core.Client.Device.Droid.Utils;
 using VpnHood.Core.Common.Exceptions;
 using Com.Chartboost.Sdk.Ads;
 using Com.Chartboost.Sdk.Callbacks;
 using Com.Chartboost.Sdk.Events;
+using VpnHood.Core.Client.Device.UiContexts;
 
 namespace VpnHood.AppLib.Droid.Ads.VhChartboost;
 
-public class ChartboostAdProvider(string appId, string adSignature, string adLocation, TimeSpan initializeTimeout) : IAppAdProvider
+public class ChartboostAdProvider(string appId, string adSignature, string adLocation, TimeSpan initializeTimeout) 
+    : IAppAdProvider
 {
     private Interstitial? _chartboostInterstitialAd;
     private MyInterstitialCallBack? _myInterstitialCallBack;

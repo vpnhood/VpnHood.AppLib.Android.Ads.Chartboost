@@ -3,7 +3,7 @@ using Com.Chartboost.Sdk.Callbacks;
 using Com.Chartboost.Sdk.Events;
 using Com.Chartboost.Sdk.Privacy.Model;
 using VpnHood.Core.Common.Exceptions;
-using VpnHood.Core.Common.Utils;
+using VpnHood.Core.Toolkit.Utils;
 
 namespace VpnHood.AppLib.Droid.Ads.VhChartboost;
 
